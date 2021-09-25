@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Needs.API.Entities;
+using Needs.API.ORM;
 using Needs.Core.Models;
 using System;
 using System.Collections.Generic;
@@ -22,7 +24,11 @@ namespace Needs.API.Controllers {
         }
 
         [HttpPost("")]
-        public ProductBase Upsert([FromBody] ProductBase product) {
+        public object Upsert(
+            [FromServices] NeedsDbContext dbContext,
+            [FromBody] Product product) {
+            dbContext.Add(product);
+            dbContext.SaveChanges();
             return product;
         }
 
