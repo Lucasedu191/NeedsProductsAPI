@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Needs.API", "Needs.API.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Needs.Core", "..\Needs.Core\Needs.Core.csproj", "{0454903B-4EB9-426A-A6A3-AE9EE5E7405C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Core", "0 - Core", "{762691BB-70AF-4BE3-A713-927921FBF9BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{9A72BB86-A8E8-4E01-8F1D-2E70E57131D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +28,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{79F5530D-203C-4D88-9EFD-DF25A9C4B694} = {9A72BB86-A8E8-4E01-8F1D-2E70E57131D3}
+		{0454903B-4EB9-426A-A6A3-AE9EE5E7405C} = {762691BB-70AF-4BE3-A713-927921FBF9BF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB070DBA-29E2-41BC-AE44-B29DFAA23F71}
