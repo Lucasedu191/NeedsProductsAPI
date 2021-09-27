@@ -19,16 +19,19 @@ namespace Needs.API.Controllers {
         }
 
         [HttpGet("{id}")]
-        public ProductBase GetById([FromRoute] string id) {
-            return new ProductBase();
+        public ProductBase GetById(
+            [FromServices] Test test,
+            [FromRoute] string id) {
+            return test.Id
+            //return new ProductBase();
         }
 
         [HttpPost("")]
         public object Upsert(
             [FromServices] NeedsDbContext dbContext,
-            [FromBody] Product product) {
-            dbContext.Add(product);
-            dbContext.SaveChanges();
+            [FromBody] ProductBase product,
+            [FromServices] NeedsDbContext needsDbContext) {
+            
             return product;
         }
 
